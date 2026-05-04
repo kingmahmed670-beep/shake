@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Books</title>
+    <link rel="stylesheet" href="style.css">
+    <a href="events.html" style="color:#C6AC8F; font-size:1.2rem;">📅 Events</a>
+</head>
+<body>
+
+<header>
+    <h1>📚 Online Books Library</h1>
+    <input type="text" id="search" placeholder="Search for books..." onkeyup="searchBooks()">
+</header>
+
+<!-- Categories -->
+<div class="categories">
+    <button onclick="filterCategory('all')">All</button>
+    <button onclick="filterCategory('programming')">Programming</button>
+    <button onclick="filterCategory('stories')">Stories</button>
+</div>
+
+<!-- Books -->
+<section class="books-container" id="books">
+
+    <div class="book programming">
+        <img src="https://via.placeholder.com/150">
+        <h3>HTML Guide</h3>
+        <button onclick="openBook('https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf')">Open</button>
+        <span onclick="toggleFav(this)">❤️</span>
+    </div>
+
+    <div class="book programming">
+        <img src="https://via.placeholder.com/150">
+        <h3>CSS Basics</h3>
+        <button onclick="openBook('https://www.orimi.com/pdf-test.pdf')">Open</button>
+        <span onclick="toggleFav(this)">❤️</span>
+    </div>
+
+    <div class="book stories">
+        <img src="https://via.placeholder.com/150">
+        <h3>Story Book</h3>
+        <button onclick="openBook('https://www.africau.edu/images/default/sample.pdf')">Open</button>
+        <span onclick="toggleFav(this)">❤️</span>
+    </div>
+
+</section>
+
+<!-- About -->
+<section class="about">
+    <h2>About Website</h2>
+    <p>
+        This website allows users to read books online easily.
+        You can search, filter categories, and add books to your favorites.
+    </p>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
